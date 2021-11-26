@@ -1,6 +1,6 @@
 {
   "name": "init-rem",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "",
   "main": "dist/index.js",
   "keywords": [],
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/zhenhappy/init-rem.git"
   },
   "scripts": {
-    "build": "webpack --config config/webpack.config.js"
+    "prepublishOnly": "webpack --config config/webpack.config.js && cp src/index.d.ts dist/"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
