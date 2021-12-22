@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/zhenhappy/init-rem.git"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
   "scripts": {
     "prepublishOnly": "webpack --config config/webpack.config.js && cp src/index.d.ts dist/"
   },
