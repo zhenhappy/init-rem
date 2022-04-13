@@ -1,6 +1,6 @@
 {
   "name": "init-rem",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "description": "",
   "main": "dist/index.js",
   "keywords": [],
@@ -9,9 +9,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhenhappy/init-rem.git"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.com/"
   },
   "scripts": {
     "prepublishOnly": "webpack --config config/webpack.config.js && cp src/index.d.ts dist/"

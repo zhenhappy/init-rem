@@ -32,7 +32,7 @@ export const initRem = (options) => {
         remBaseStyle = document.createElement('style')
         remBaseStyle.id = 'rem-base-style'
         remBaseStyle.innerHTML = innerHTML
-        head.append(remBaseStyle)
+        head.appendChild(remBaseStyle)
       }
     }
     document.addEventListener(
