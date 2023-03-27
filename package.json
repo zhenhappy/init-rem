@@ -1,24 +1,22 @@
 {
   "name": "init-rem",
-  "version": "1.2.6",
+  "version": "2.0.0",
+  "keywords": [],
+  "license": "MIT",
   "description": "",
   "main": "dist/index.js",
-  "keywords": [],
-  "license": "ISC",
+  "types": "dist/index.d.ts",
+  "module": "dist/esm/index.js",
   "author": "zhenhappy <q505507538@gmail.com> (https://github.com/zhenhappy)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhenhappy/init-rem.git"
   },
   "scripts": {
-    "prepublishOnly": "webpack --config config/webpack.config.js && cp src/index.d.ts dist/"
+    "prepublishOnly": "tsup"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "uglifyjs-webpack-plugin": "^1.1.2",
-    "webpack": "^3.10.0"
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
   }
 }
