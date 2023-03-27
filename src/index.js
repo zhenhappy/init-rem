@@ -1,5 +1,3 @@
-import { clamp } from 'lodash'
-
 export const initRem = (options) => {
   options = {
     designWidth: 750,  // 定义设计图尺寸宽度
@@ -11,7 +9,7 @@ export const initRem = (options) => {
                        // 那100px=1rem, 34px=0.34rem, 所有尺寸的实际尺寸和rem相差100倍
                        // 也不要小于12px, 虽然用10px也不错, 但是开发环境由于是Chrome,
                        // 小于12像素会有问题, 但是真实设备上是没问题的, 所以根据自己的开发环境决定
-    ...options,
+    ...options
   }
 
   _setBaseFontSize()
@@ -40,14 +38,13 @@ export const initRem = (options) => {
       () => {
         _setBodyFontSize(true)
       },
-      false,
+      false
     )
   }
 
   // 设置REM基准字号 1rem = 设计图尺寸 / 屏幕dpr / 基准字号
   function _setBaseFontSize () {
-    const { clientWidth } = document.documentElement
-    const rem = (options.baseFontSize * clamp(clientWidth, options.minWidth, options.maxWidth)) / options.designWidth
+    const rem = (options.baseFontSize * Math.min(Math.max(window.innerWidth, options.minWidth), options.maxWidth)) / options.designWidth
     document.documentElement.style.fontSize = `${rem}px`
   }
 
